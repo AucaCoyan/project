@@ -1,0 +1,14 @@
+on:
+    push:
+        paths:
+            - backend/API.WaiterApp
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Setup .NET Core SDK
+              uses: actions/setup-dotnet@v4.0.0
+            - name: Display dotnet version
+              run: dotnet --version
