@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WaiterApp.API.Controllers
+namespace Bite.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,4 +1,4 @@
-namespace WaiterApp.API
+namespace Bite.API
 {
     public class WeatherForecast
     {
