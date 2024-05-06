@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    working-directory: backend/API.WaiterApp
+    working-directory: backend/Bite.API
 
 jobs:
     build:
@@ -17,8 +17,6 @@ jobs:
           with:
             dotnet-version: 8.0.x
         - name: Build
-          working-directory: backend/API.WaiterApp/
           run: dotnet build --no-restore
         - name: Test
-          working-directory: backend/API.WaiterApp/
           run: dotnet test --no-restore --verbosity normal
