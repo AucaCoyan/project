@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Nemox\Deployadas</_PublishTargetUrl>
-    <History>True|2024-05-03T21:36:07.5918141Z;True|2024-05-03T18:31:10.7594108-03:00;True|2024-05-03T18:30:47.7591160-03:00;</History>
+    <History>True|2024-05-08T03:54:29.0109477Z;True|2024-05-03T18:36:07.5918141-03:00;True|2024-05-03T18:31:10.7594108-03:00;True|2024-05-03T18:30:47.7591160-03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
