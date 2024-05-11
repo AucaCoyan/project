@@ -5,7 +5,7 @@ on:
 
 defaults:
   run:
-    working-directory: backend/Bite.API
+    working-directory: backend/Bite
 
 jobs:
     build:
