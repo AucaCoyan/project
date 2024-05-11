@@ -5,3 +5,16 @@ build/
 backend/Bite/Bite.API/bin/
 backend/Bite/Bite.API/obj/
 backend/Bite/Bite.API/*.dll
+backend/*.dll
+backend/Bite/Bite.Entity/obj/Debug/net8.0/refint/Bite.Entity.dll
+backend/Bite/Bite.Entity/obj/Debug/net8.0/ref/Bite.Entity.dll
+backend/*.suo
+backend/*.user
+backend/*.userosscache
+backend/*.sln.docstates
+/backend/Bite/Bite.Entity/obj
+/backend/Bite/Bite.Data/obj
+/backend/Bite/Bite.Entity/bin
+/backend/Bite/Bite.Data/bin
+/backend/Bite/.vs
+/backend/Bite/.vs

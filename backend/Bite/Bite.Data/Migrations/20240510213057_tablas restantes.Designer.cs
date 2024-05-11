@@ -3,6 +3,7 @@ using System;
 using Bite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Bite.Data.Migrations
 {
     [DbContext(typeof(BiteContext))]
-    partial class BiteContextModelSnapshot : ModelSnapshot
+    [Migration("20240510213057_tablas restantes")]
+    partial class tablasrestantes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,8 +41,6 @@ namespace Bite.Data.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SubsidiaryId");
 
                     b.ToTable("DinningTable");
                 });
@@ -69,8 +70,6 @@ namespace Bite.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RestaurantId");
-
                     b.ToTable("MenuItem");
                 });
 
@@ -99,41 +98,9 @@ namespace Bite.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TableId");
-
                     b.HasIndex("WaiterId");
 
                     b.ToTable("Order");
-                });
-
-            modelBuilder.Entity("Bite.Entity.OrderItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Comment")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("ItemId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ItemId");
-
-                    b.HasIndex("OrderId");
-
-                    b.ToTable("OrderItem");
                 });
 
             modelBuilder.Entity("Bite.Entity.Restaurant", b =>
@@ -166,8 +133,6 @@ namespace Bite.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RestaurantId");
-
                     b.ToTable("Subsidiary");
                 });
 
@@ -179,84 +144,23 @@ namespace Bite.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("Name")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
                     b.ToTable("Waiter");
                 });
 
-            modelBuilder.Entity("Bite.Entity.DinningTable", b =>
-                {
-                    b.HasOne("Bite.Entity.Subsidiary", "Subsidiary")
-                        .WithMany()
-                        .HasForeignKey("SubsidiaryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Subsidiary");
-                });
-
-            modelBuilder.Entity("Bite.Entity.MenuItem", b =>
-                {
-                    b.HasOne("Bite.Entity.Restaurant", "Restaurant")
-                        .WithMany()
-                        .HasForeignKey("RestaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Restaurant");
-                });
-
             modelBuilder.Entity("Bite.Entity.Order", b =>
                 {
-                    b.HasOne("Bite.Entity.DinningTable", "Table")
-                        .WithMany()
-                        .HasForeignKey("TableId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Bite.Entity.Waiter", "Waiter")
                         .WithMany()
                         .HasForeignKey("WaiterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Table");
-
                     b.Navigation("Waiter");
-                });
-
-            modelBuilder.Entity("Bite.Entity.OrderItem", b =>
-                {
-                    b.HasOne("Bite.Entity.MenuItem", "Item")
-                        .WithMany()
-                        .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Bite.Entity.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Item");
-
-                    b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("Bite.Entity.Subsidiary", b =>
-                {
-                    b.HasOne("Bite.Entity.Restaurant", "Restaurant")
-                        .WithMany()
-                        .HasForeignKey("RestaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Restaurant");
                 });
 #pragma warning restore 612, 618
         }
