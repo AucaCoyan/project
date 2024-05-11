@@ -1,7 +1,5 @@
 on:
     push:
-        paths:
-            - frontend/**
 
 defaults:
    run:
