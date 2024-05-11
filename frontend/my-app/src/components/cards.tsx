@@ -1,51 +1,22 @@
-import imagen from "../../public/burger.webp"
+import imagen from "@/img/burger.webp";
 
 export function Card(){
     return (
-<div className="card">
-  <div className="image_container">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="image">
-      <path
-        d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"
-      ></path>
-    </svg>
-  </div>
-  <div className="title">
-    <span>New brand name</span>
-
-  </div>
-  <div className="size">
-    <span>Size</span>
-    <ul className="list-size">
-      <li className="item-list"><button className="item-list-button">37</button></li>
-      <li className="item-list"><button className="item-list-button">38</button></li>
-      <li className="item-list"><button className="item-list-button">39</button></li>
-      <li className="item-list"><button className="item-list-button">40</button></li>
-      <li className="item-list"><button className="item-list-button">41</button></li>
-    </ul>
-  </div>
-  <div className="action">
-    <div className="price">
-      <span>$299</span>
-    </div>
-    <button className="cart-button">
-      <svg
-        className="cart-icon"
-        stroke="currentColor"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-          stroke-linejoin="round"
-          stroke-linecap="round"
-        ></path>
-      </svg>
-      <span>Add to cart</span>
-    </button>
-  </div>
-</div>
+      <div className="card">
+      <div className="card-img"></div>
+      <div className="card-info">
+        <p className="text-title">Product title </p>
+        <p className="text-body">Product description and details</p>
+      </div>
+      <div className="card-footer">
+      <span className="text-title">$499.49</span>
+      <div className="card-button">
+        <svg className="svg-icon" viewBox="0 0 20 20">
+          <path d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z"></path>
+          <path d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z"></path>
+          <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
+        </svg>
+      </div>
+    </div></div>
     )
 }
