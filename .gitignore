@@ -18,3 +18,5 @@ backend/*.sln.docstates
 /backend/Bite/Bite.Data/bin
 /backend/Bite/.vs
 /backend/Bite/.vs
+/backend/Bite/Bite.BusinessLogic/bin/Debug
+/backend/Bite/Bite.BusinessLogic/obj
