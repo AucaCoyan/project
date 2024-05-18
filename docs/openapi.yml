@@ -1,0 +1,288 @@
+openapi: "3.0.2"
+info:
+  title: REST API de Bite
+  version: "1.0"
+
+servers:
+  - url: https://something.something.api.server.test/v1
+
+tags:
+  - name: recipe
+    description: endpoints relacionados a las recetas
+  - name: restaurant
+    description: endpoints relacionados al restaurante
+  - name: orders
+    description: endpoints relacionados a los pedidos
+
+components:
+  schemas:
+    restuarantData:
+      type: object
+      required:
+        - name
+        - openHours
+        - location
+      properties:
+        name:
+          type: string
+          description: nombre del restaurante
+        openHours:
+          type: string
+          description: el texto que se muestra en la pag
+        # puede haber otro horario para indicar que el restaurante esta
+        # cerrado
+        location:
+          type: string
+          description: ubicacion del restaurante (calle numero)
+        phone:
+          type: string
+          description: telefono de contacto
+        instagram:
+          type: string
+          description: pagina de instagram del restaurante
+        whatsapp:
+          type: string
+          description: numero de whatsapp del restaurante
+
+    recipe:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: nombre del plato
+        type:
+          type: string
+          description: tipo de plato (entrada, trago, sandwitch)
+
+    order:
+      type: object
+      required:
+        - orderId
+        - orderStatus
+        - table
+        - contents
+      properties:
+        orderStatus:
+          $ref: "#/components/schemas/orderStatus"
+        orderId:
+          type: string
+        table:
+          type: string
+          description: nombre o codigo de la mesa del pedido
+        contents:
+          type: array
+          items:
+            $ref: "#/components/schemas/orderItem"
+
+    orderStatus:
+      type: string
+      enum:
+        # - open?
+        - pending
+        - cancelled
+        # se podria agregar un:
+        # - readyToServe
+        # pero creo que no es necesario
+        - delivered
+
+    orderItem:
+      type: object
+      required:
+        - recipeId
+        - amount
+      properties:
+        recipeId:
+          type: string
+          description: codigo del plato pedido
+        amount:
+          type: number
+          description: cantidad del platos
+        notes:
+          type: string
+          description: notas adicionales
+
+  parameters:
+    restaurantId:
+      name: restaurantId
+      in: path
+      description: id unico del restaurante
+      required: true
+      schema:
+        type: string
+    storeId:
+      name: storeId
+      in: path
+      description: id unico de la tienda
+      required: true
+      schema:
+        type: string
+    recipeId:
+      name: recipeId
+      in: path
+      description: id unico del plato (puede estar en más de una tienda)
+      required: true
+      schema:
+        type: string
+    orderId:
+      name: orderId
+      in: path
+      description: id unico del pedido
+      required: true
+      schema:
+        type: string
+
+paths:
+  /check-health:
+    get:
+      operationId: check-health
+      summary: devuelve "OK" si esta funcionando
+      description: checks the status of the application
+      parameters: []
+      responses:
+        "200":
+          description: OK
+
+  /{restaurantId}/{storeId}/data:
+    get:
+      operationId: get-restaurant-info
+      summary: obtiene los datos de un restaurante
+      description: obtiene horario, ubicacion y contacto
+      tags:
+        - restaurant
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+      responses:
+        "200":
+          description: devuelve los datos del restaurante
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/restuarantData"
+
+    put:
+      operationId: update-restaurant-info
+      summary: actualiza los datos de un restaurante
+      description: actualiza horario, ubicacion y/o contacto
+      tags:
+        - restaurant
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+      requestBody:
+        description: todos los datos a actualizar (los que se actualizan y los
+          que no)
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/restuarantData"
+
+      responses:
+        "200":
+          description: devuelve los datos actualizados
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/restuarantData"
+
+  /{restaurantId}/{storeId}/recipe/all:
+    get:
+      operationId: get-all-recipes
+      summary: obtiene todos las recetas
+      tags:
+        - recipe
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+      responses:
+        "200":
+          description: devuelve una lista de platos
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/recipe"
+
+  /{restaurantId}/{storeId}/recipe/{recipeId}:
+    get:
+      operationId: get-a-recipe
+      summary: obtiene una receta
+      tags:
+        - recipe
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+        - $ref: "#/components/parameters/recipeId"
+      responses:
+        "200":
+          description: devuelve una lista de platos
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/recipe"
+
+  /{restaurantId}/{storeId}/order/{orderId}:
+    get:
+      operationId: get-an-order
+      summary: obtiene una orden
+      tags:
+        - orders
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+        - $ref: "#/components/parameters/orderId"
+      responses:
+        "200":
+          description: devuelve el estado y contenido de la orden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/order"
+
+  /{restaurantId}/{storeId}/order/:
+    post:
+      operationId: add-an-order
+      summary: agrega una orden a la lista
+      tags:
+        - orders
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+      responses:
+        "200":
+          description: agrega la orden
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/order"
+
+  /{restaurantId}/{storeId}/order/pending:
+    get:
+      operationId: get-pending-orders
+      summary: obtiene todas las ordenes no canceladas o cerradas
+      tags:
+        - orders
+      parameters:
+        - $ref: "#/components/parameters/restaurantId"
+        - $ref: "#/components/parameters/storeId"
+      responses:
+        "200":
+          description: recibe las ordenes no canceladas o cerradas
+          content:
+            application/json:
+              schema:
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/order"
