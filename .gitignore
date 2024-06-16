@@ -20,5 +20,5 @@ backend/*.sln.docstates
 /backend/Bite/.vs
 /backend/Bite/Bite.BusinessLogic/bin/Debug
 /backend/Bite/Bite.BusinessLogic/obj
-bun.lockdb
+**/bun.lockb
 
