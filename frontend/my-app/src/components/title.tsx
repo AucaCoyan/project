@@ -1,8 +1,7 @@
-import { Roboto} from 'next/font/google'
+import { Bebas_Neue } from 'next/font/google';
 
 
-
-const roboto = Roboto({
+const ubuntu = Bebas_Neue({
     weight: '400',
     subsets: ['latin'],
   })
@@ -11,8 +10,8 @@ const roboto = Roboto({
 
 export default function Title() {
     return (
-        <div className={roboto.className}>
-        <h1 className="m-8 text-2xl text-lime-700 ">BITE</h1>
+        <div className={ubuntu.className}>
+        <h1 className="mx-7 mb-20 mt-9 text-3xl text-gray-800">Bite</h1>
       </div>
     );
   }
