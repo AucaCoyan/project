@@ -18,11 +18,24 @@ export default function Home() {
           style={{ height: "100px", width: "100px", margin: "20px" }}
           value="https://bite-ruby.vercel.app/comensal"
         />
+
+
+
         <QRCode
           size={256}
           style={{ height: "100px", width: "100px", margin: "20px" }}
           value="https://bite-ruby.vercel.app/caja"
+          
         />
+        <QRCode
+          size={256}
+          style={{ height: "100px", width: "100px", margin: "20px" }}
+          value="https://bite-ruby.vercel.app/mozo"
+          
+        />
+        
+
+        
       </div>
     </div>
   );
