@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|solutionrelative:bite.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.api\\controllers\\subsidiarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|solutionrelative:bite.api\\controllers\\subsidiarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A03BE29-2A79-477B-92E9-BF4A44A5901A}|Bite.BusinessLogic\\Bite.BusinessLogic.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.businesslogic\\restaurantbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A03BE29-2A79-477B-92E9-BF4A44A5901A}|Bite.BusinessLogic\\Bite.BusinessLogic.csproj|solutionrelative:bite.businesslogic\\restaurantbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.api\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|solutionrelative:bite.api\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.api\\controllers\\subsidiarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|solutionrelative:bite.api\\controllers\\subsidiarycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.api\\models\\restaurant\\restaurantmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AA92F86C-B429-4F8D-97D5-883FDDBBA759}|Bite.Data\\Bite.Data.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.data\\bitecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AA92F86C-B429-4F8D-97D5-883FDDBBA759}|Bite.Data\\Bite.Data.csproj|solutionrelative:bite.data\\bitecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|c:\\nemox\\proyectosinnombre\\project\\backend\\bite\\bite.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DEBD9C6-E47E-4248-A1A0-8D6CF46DE389}|Bite.API\\Bite.API.csproj|solutionrelative:bite.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 24,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Program.cs",
               "RelativeDocumentMoniker": "Bite.API\\Program.cs",
               "ToolTip": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Program.cs",
               "RelativeToolTip": "Bite.API\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACcAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T21:10:07.601Z",
               "IsPinned": true,
@@ -56,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "RestaurantController.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Controllers\\RestaurantController.cs",
               "RelativeDocumentMoniker": "Bite.API\\Controllers\\RestaurantController.cs",
@@ -65,18 +65,17 @@
               "ViewState": "AQIAAAgAAAAAAAAAAAAvwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-06T04:20:13.098Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SubsidiaryController.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Controllers\\SubsidiaryController.cs",
               "RelativeDocumentMoniker": "Bite.API\\Controllers\\SubsidiaryController.cs",
               "ToolTip": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Controllers\\SubsidiaryController.cs",
               "RelativeToolTip": "Bite.API\\Controllers\\SubsidiaryController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAQwDsAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-11T03:09:35.642Z",
               "IsPinned": true,
@@ -160,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RestaurantModel.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Models\\Restaurant\\RestaurantModel.cs",
               "RelativeDocumentMoniker": "Bite.API\\Models\\Restaurant\\RestaurantModel.cs",
@@ -168,12 +167,11 @@
               "RelativeToolTip": "Bite.API\\Models\\Restaurant\\RestaurantModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T05:32:22.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T05:32:22.656Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BiteContext.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.Data\\BiteContext.cs",
               "RelativeDocumentMoniker": "Bite.Data\\BiteContext.cs",
@@ -181,25 +179,24 @@
               "RelativeToolTip": "Bite.Data\\BiteContext.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAxwBsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T15:54:04.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-07T15:54:04.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RestaurantBL.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.BusinessLogic\\RestaurantBL.cs",
               "RelativeDocumentMoniker": "Bite.BusinessLogic\\RestaurantBL.cs",
               "ToolTip": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.BusinessLogic\\RestaurantBL.cs",
               "RelativeToolTip": "Bite.BusinessLogic\\RestaurantBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T03:27:28.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Translator.cs",
               "DocumentMoniker": "C:\\Nemox\\ProyectoSinNombre\\project\\backend\\Bite\\Bite.API\\Common\\Translator.cs",
               "RelativeDocumentMoniker": "Bite.API\\Common\\Translator.cs",
@@ -207,8 +204,7 @@
               "RelativeToolTip": "Bite.API\\Common\\Translator.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAEwAsAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-11T01:05:09.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-11T01:05:09.905Z"
             }
           ]
         }

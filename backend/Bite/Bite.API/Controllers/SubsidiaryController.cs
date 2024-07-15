@@ -1,7 +1,6 @@
 ﻿using Bite.API.Common;
 using Bite.API.Models;
 using Bite.Data;
-using Bite.Data.DAO;
 using Bite.Entity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

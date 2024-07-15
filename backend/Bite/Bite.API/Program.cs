@@ -1,5 +1,4 @@
 using Bite.Data;
-using Bite.Data.DAO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Supabase;
