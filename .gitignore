@@ -22,3 +22,7 @@ backend/*.sln.docstates
 /backend/Bite/Bite.BusinessLogic/obj
 **/bun.lockb
 
+backend/Bite/.vs/ProjectEvaluation/bite.metadata.v7.bin
+backend/Bite/.vs/ProjectEvaluation/bite.metadata.v7.bin
+backend/Bite/.vs/ProjectEvaluation/bite.projects.v7.bin
+backend/Bite/.vs/ProjectEvaluation/bite.projects.v7.bin

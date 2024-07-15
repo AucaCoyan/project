@@ -3,6 +3,7 @@ using System;
 using Bite.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Bite.Data.Migrations
 {
     [DbContext(typeof(BiteContext))]
-    partial class BiteContextModelSnapshot : ModelSnapshot
+    [Migration("20240712193942_relaciones")]
+    partial class relaciones
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -161,11 +164,7 @@ namespace Bite.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int?>("RestaurantId")
+                    b.Property<int>("RestaurantId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -254,9 +253,13 @@ namespace Bite.Data.Migrations
 
             modelBuilder.Entity("Bite.Entity.Subsidiary", b =>
                 {
-                    b.HasOne("Bite.Entity.Restaurant", null)
+                    b.HasOne("Bite.Entity.Restaurant", "Restaurant")
                         .WithMany("Subsidiaries")
-                        .HasForeignKey("RestaurantId");
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Restaurant");
                 });
 
             modelBuilder.Entity("Bite.Entity.Restaurant", b =>

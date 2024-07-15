@@ -1,4 +1,5 @@
 using Bite.Data;
+using Bite.Data.DAO;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Supabase;
@@ -15,6 +16,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BiteContext>(options => 
             options.UseNpgsql(builder.Configuration.GetConnectionString("BiteContext")));
+
+//builder.Services.AddScoped(typeof(IRepositoryDAO<>), typeof(IRepositoryDAO<>));
 
 //builder.Services.AddHealthChecks();
 

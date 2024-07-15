@@ -1,5 +1,6 @@
 ﻿using Bite.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace Bite.Data
 {
@@ -28,6 +29,7 @@ namespace Bite.Data
             base.OnModelCreating(modelBuilder);
 
             //modelBuilder.Entity<Prueba>().HasKey(x => x.Id);
+
         }
     }
 }

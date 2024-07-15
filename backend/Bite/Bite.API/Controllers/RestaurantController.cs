@@ -1,4 +1,5 @@
-﻿using Bite.API.Models;
+﻿using Bite.API.Common;
+using Bite.API.Models;
 using Bite.Data;
 using Bite.Entity;
 using Microsoft.AspNetCore.Http;
@@ -21,13 +22,13 @@ namespace Bite.API.Controllers
         [HttpGet]
         public async Task<IList<Restaurant>> Get()
         {
-            return await _context.Restaurant.ToListAsync();
+            return await _context.Restaurant.Include(r => r.Subsidiaries).ToListAsync();
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var restaurant = await _context.Restaurant.FirstOrDefaultAsync(r => r.Id == id);
+            var restaurant = await _context.Restaurant.Include(r => r.Subsidiaries).FirstOrDefaultAsync(r => r.Id == id);
             if(restaurant == null)
             {
                 return NotFound();
@@ -38,10 +39,10 @@ namespace Bite.API.Controllers
             }
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> Post(Restaurant obj)
+        public async Task<IActionResult> Post(RestaurantModel model)
         {
+            Restaurant obj = Translator.Translate(model);
             await _context.Restaurant.AddAsync(obj);
             await _context.SaveChangesAsync();
 
@@ -49,8 +50,9 @@ namespace Bite.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(Restaurant obj)
+        public async Task<IActionResult> Put(RestaurantModel model)
         {
+            Restaurant obj = Translator.Translate(model);
             _context.Restaurant.Update(obj);
             await _context.SaveChangesAsync();
 
