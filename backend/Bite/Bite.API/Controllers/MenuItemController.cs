@@ -22,13 +22,13 @@ namespace Bite.API.Controllers
         [HttpGet]
         public async Task<IList<MenuItem>> Get()
         {
-            return await _context.MenuItem.ToListAsync();
+            return await _context.MenuItem.Include(m => m.Restaurant).ToListAsync();
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var obj = await _context.MenuItem.FirstOrDefaultAsync(r => r.Id == id);
+            var obj = await _context.MenuItem.Include(m => m.Restaurant).FirstOrDefaultAsync(r => r.Id == id);
             if(obj == null)
             {
                 return NotFound();
@@ -56,8 +56,15 @@ namespace Bite.API.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Put(MenuItem obj)
+        public async Task<IActionResult> Put(MenuItemModel model)
         {
+            MenuItem obj = Translator.Translate(model);
+            var res = await _context.Restaurant.FirstOrDefaultAsync(r => r.Id == model.RestaurantId);
+            if (res == null)
+            {
+                return BadRequest("Restaurant not found");
+            }
+            obj.Restaurant = res;
             _context.MenuItem.Update(obj);
             await _context.SaveChangesAsync();
 
