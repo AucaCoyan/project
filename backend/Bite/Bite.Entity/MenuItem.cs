@@ -3,10 +3,17 @@
     public class MenuItem
     {
         public int Id { get; set; }
-        public int Name { get; set; }
-        public int Description { get; set; }
-        public int Price { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
         public int Type { get; set; }
         public Restaurant Restaurant { get; set; }
+    }
+
+    public enum MenuItemType
+    {
+        Food = 1,
+        Drink = 2,
+        Dessert = 3
     }
 }

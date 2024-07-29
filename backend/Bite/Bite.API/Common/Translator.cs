@@ -18,5 +18,14 @@ namespace Bite.API.Common
             obj.Name = model.Name;
             return obj;
         }
+        public static MenuItem Translate(MenuItemModel model)
+        {
+            MenuItem obj = new MenuItem();
+            obj.Name = model.Name;
+            obj.Description = model.Description;
+            obj.Price = model.Price;
+            obj.Type = model.Type;
+            return obj;
+        }
     }
 }
