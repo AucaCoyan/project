@@ -10,12 +10,23 @@ namespace Bite.API.Common
         {
             Restaurant obj = new Restaurant();
             obj.Name = model.Name;
+            if(model.Id > 0) obj.Id = model.Id;
             return obj;
         }
         public static Subsidiary Translate(SubsidiaryModel model)
         {
             Subsidiary obj = new Subsidiary();
             obj.Name = model.Name;
+            return obj;
+        }
+        public static MenuItem Translate(MenuItemModel model)
+        {
+            MenuItem obj = new MenuItem();
+            if (model.Id > 0) obj.Id = model.Id;
+            obj.Name = model.Name;
+            obj.Description = model.Description;
+            obj.Price = model.Price;
+            obj.Type = model.Type;
             return obj;
         }
     }

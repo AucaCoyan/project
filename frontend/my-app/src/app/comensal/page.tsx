@@ -1,7 +1,7 @@
 export default function Comensal() {
     return (
         <>
-        <h1>Comensal</h1>
+        <h1>Comensal local</h1>
         </>
     )
 }

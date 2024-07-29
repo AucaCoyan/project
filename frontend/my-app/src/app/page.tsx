@@ -14,6 +14,7 @@ export default function Home() {
       <Card />
 
       {/* <div className="m-4 ml-[3.7rem] flex">
+
         <h1>Qr para comensal</h1><br />
         <QRCode
           style={{ height: "100px", width: "100px", margin: "20px" }}
