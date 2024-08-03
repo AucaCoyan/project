@@ -16,6 +16,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BiteContext>(options => 
             options.UseNpgsql(builder.Configuration.GetConnectionString("BiteContext")));
 
+//builder.Services.AddScoped(typeof(IRepositoryDAO<>), typeof(IRepositoryDAO<>));
+
 //builder.Services.AddHealthChecks();
 
 var app = builder.Build();
