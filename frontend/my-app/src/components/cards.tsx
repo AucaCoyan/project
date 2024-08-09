@@ -504,7 +504,8 @@ export default function Card() {
             </div>
           </a>
         </div>
-      </div>
+        </div>
+      
     </section>
   );
 }
