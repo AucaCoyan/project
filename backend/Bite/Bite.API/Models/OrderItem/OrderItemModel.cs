@@ -1,8 +1,12 @@
-﻿namespace Bite.Entity
+﻿using Bite.Entity;
+
+namespace Bite.API.Models
 {
-    public class OrderItem
+    public class OrderItemModel
     {
-        public int Id { get; set; }
+        public OrderItemModel()
+        {
+        }
         public int MenuItemId { get; set; }
         public int Quantity { get; set; }
         public string? Comment { get; set; }

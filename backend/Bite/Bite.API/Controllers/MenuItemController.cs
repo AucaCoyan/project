@@ -39,6 +39,20 @@ namespace Bite.API.Controllers
             }
         }
 
+        [HttpGet("restaurant/{id}")]
+        public async Task<IActionResult> GetByRestaurant(int id)
+        {
+            var obj = await _context.MenuItem.Include(m => m.Restaurant).Where(r => r.Restaurant.Id == id).ToListAsync();
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(obj);
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> Post(MenuItemModel model)
         {
