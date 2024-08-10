@@ -5,9 +5,9 @@ WORKDIR /App
 # Copy everything
 COPY . ./
 # Restore as distinct layers
-RUN dotnet restore Bite.API/Bite.API.sln
+RUN dotnet restore Bite.sln
 # Build and publish a release
-RUN dotnet publish Bite.API/Bite.API.sln -c Release -o out
+RUN dotnet publish Bite.sln -c Release -o out
 
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
