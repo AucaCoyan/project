@@ -5,7 +5,7 @@ frontend_docker_build:
     docker build --file ./frontend/Dockerfile -t bite-frontend .
 
 backend_docker_build:
-    docker build -t bite-backend .
+    docker build --file ./backend/Dockerfile -t bite-backend .
 
 frontend_docker_run:
     docker run -p 3000:3000 --rm bite-frontend
@@ -18,3 +18,9 @@ up-development: ## Build the development docker image.
 
 down-development: ## Start the development docker container.
 	docker compose down
+
+build: frontend_docker_build backend_docker_build
+
+run:
+    docker compose up
+

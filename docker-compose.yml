@@ -1,6 +1,7 @@
 services:
   backend:
     image: bite-backend
+    pull_policy: never
     container_name: bite_backend
     build:
       context: ./backend
@@ -10,6 +11,7 @@ services:
       - 8080:8080
   frontend:
     image: bite-frontend
+    pull_policy: never
     container_name: bite_frontend
     build:
       context: ./frontend
