@@ -1,0 +1,12 @@
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\bin\Debug\net8.0\Bite.Entity.deps.json
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\bin\Debug\net8.0\Bite.Entity.dll
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\bin\Debug\net8.0\Bite.Entity.pdb
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.sourcelink.json
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.dll
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\refint\Bite.Entity.dll
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\Bite.Entity.pdb
+C:\Users\Usuario\Desktop\BITE\project\backend\Bite.Entity\obj\Debug\net8.0\ref\Bite.Entity.dll

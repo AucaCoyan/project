@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bite.API.props" />
+</Project>
