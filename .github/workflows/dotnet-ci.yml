@@ -3,7 +3,7 @@ on:
 
 defaults:
   run:
-    working-directory: backend/Bite/Bite.API
+    working-directory: backend/Bite.API
 
 jobs:
     build:

@@ -3,7 +3,7 @@ on:
 
 defaults:
    run:
-        working-directory: frontend/my-app
+        working-directory: frontend
 
 jobs:
     build:
@@ -14,5 +14,5 @@ jobs:
           uses: actions/setup-node@v3
         - run: node --version
         - name: npm ci
-          working-directory: frontend/my-app
+          working-directory: frontend
           run: npm ci
